@@ -1,6 +1,6 @@
 # Siv3D_WheelSimulator
 
-## シュミレーションアプリケーションの使い方
+## シミュレーションアプリケーションの使い方
 
 ![robot_simulation](https://user-images.githubusercontent.com/98096559/244943218-2194f28d-c7cb-4644-af9e-51b01e5e5c22.png)
 
