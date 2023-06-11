@@ -63,8 +63,11 @@ void Main()
 				-LeftAxis.x - LeftAxis.y + InputTurn,
 				-LeftAxis.x + LeftAxis.y + InputTurn,
 			};
-			const auto max = std::max(abs(*std::max_element(Wheel.begin(), Wheel.end()))
-				, abs(*std::min_element(Wheel.begin(), Wheel.end())));
+
+			const auto max = std::accumulate(Wheel.begin(), Wheel.end(), 0., [](double a, double b) {
+									return std::max(a, abs(b));
+								});
+
 			double MAX = robotSpeed;
 			if (max > MAX) {
 				double maximum = MAX / max;
