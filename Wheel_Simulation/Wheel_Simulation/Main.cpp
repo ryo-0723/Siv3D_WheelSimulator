@@ -56,13 +56,18 @@ void Main()
 			robot.SetPower(length, angle).draw(color);
 		}
 		else {
-			std::array<double, 4>Wheel;
-			Wheel[0] = LeftAxis.x + LeftAxis.y + InputTurn;
-			Wheel[1] = LeftAxis.x - LeftAxis.y + InputTurn;
-			Wheel[2] = -LeftAxis.x - LeftAxis.y + InputTurn;
-			Wheel[3] = -LeftAxis.x + LeftAxis.y + InputTurn;
-			const auto max = std::max(abs(*std::max_element(Wheel.begin(), Wheel.end()))
-				, abs(*std::min_element(Wheel.begin(), Wheel.end())));
+			std::array<double, 4>Wheel
+			{
+				 LeftAxis.x + LeftAxis.y + InputTurn,
+				 LeftAxis.x - LeftAxis.y + InputTurn,
+				-LeftAxis.x - LeftAxis.y + InputTurn,
+				-LeftAxis.x + LeftAxis.y + InputTurn,
+			};
+
+			const auto max = std::accumulate(Wheel.begin(), Wheel.end(), 0., [](double a, double b) {
+									return std::max(a, abs(b));
+								});
+
 			double MAX = robotSpeed;
 			if (max > MAX) {
 				double maximum = MAX / max;
