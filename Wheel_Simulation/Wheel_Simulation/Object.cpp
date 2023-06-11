@@ -28,7 +28,7 @@ Object& Object::draw(const Color& Framecolor=Palette::White) {
 			, 6
 			, Vec2{ 8,8 }).draw();
 	}
-	SimpleGUI::CheckBox(moveMode,U"ロボットの固定",Vec2{10,60});
+	SimpleGUI::CheckBox(moveMode,U"ロボットの固定",Vec2{10,10});
 	return *this;
 }
 

@@ -150,6 +150,12 @@
     <ClCompile Include="PdController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Steer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PS5Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
@@ -786,6 +792,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PdController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Steer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PS5Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
